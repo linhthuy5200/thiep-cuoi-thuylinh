@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thùy Linh & Đình Hiếu — 18.04.2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;background:#1a2a5e;color:#fff;overflow-x:hidden;}
+
+/* SCROLL ANIMATION */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s ease,transform 0.9s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ======= SECTION 1: COVER (navy) ======= */
+.s-cover{
+  min-height:100vh;
+  background:#1a2a5e;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;
+  padding:60px 32px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Subtle texture lines */
+.s-cover::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    135deg,
+    transparent 0px,transparent 60px,
+    rgba(255,255,255,0.015) 60px,rgba(255,255,255,0.015) 61px
+  );
+}
+
+.monogram-wrap{
+  margin-bottom:32px;
+  position:relative;
+}
+
+.monogram-wrap{margin-bottom:16px;position:relative;}
+.monogram-svg{width:120px;height:120px;}
+
+/* Monogram SVG wreath */
+.monogram-svg{width:120px;height:120px;}
+
+.cover-names{
+  font-family:'Pinyon Script',cursive;
+  font-size:clamp(44px,10vw,72px);
+  color:#ffffff;
+  line-height:1.15;
+  margin-bottom:20px;
+  text-shadow:0 1px 12px rgba(255,255,255,0.1);
+}
+
+.cover-with-love{
+  font-family:'EB Garamond',serif;
+  font-size:12px;letter-spacing:4px;
+  color:rgba(255,255,255,0.55);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.cover-welcome{
+  font-family:'EB Garamond',serif;
+  font-size:12px;letter-spacing:4px;
+  color:rgba(255,255,255,0.55);
+  text-transform:uppercase;
+  margin-bottom:28px;
+}
+
+.cover-date{
+  font-family:'EB Garamond',serif;
+  font-size:16px;letter-spacing:3px;
+  color:#ffffff;
+  margin-bottom:60px;
+}
+
+.cover-invite-line{
+  width:100%;
+  position:absolute;bottom:40px;left:0;right:0;
+  text-align:center;
+}
+.cover-invite-text{
+  font-family:'EB Garamond',serif;
+  font-size:12px;letter-spacing:4px;
+  color:rgba(255,255,255,0.5);
+  text-transform:uppercase;
+}
+.cover-dots{
+  flex:1;border-bottom:1px dotted rgba(255,255,255,0.25);
+}
+
+/* ======= SECTION 2: INVITE CARD (cream) ======= */
+.s-invite{
+  background:#f0ebe0;
+  color:#1a2a5e;
+  padding:70px 32px;
+  text-align:center;
+  position:relative;
+}
+
+.invite-card{
+  max-width:420px;margin:0 auto;
+  border:2px solid #1a2a5e;
+  padding:48px 36px;
+  position:relative;
+}
+
+.invite-label{
+  font-family:'EB Garamond',serif;
+  font-size:13px;letter-spacing:5px;
+  color:#1a2a5e;text-transform:uppercase;
+  margin-bottom:6px;text-align:center;
+}
+.invite-italic-sub{
+  font-family:'Pinyon Script',cursive;
+  font-size:clamp(28px,6vw,40px);
+  color:#1a2a5e;text-align:center;
+  margin-bottom:20px;
+}
+.invite-sep{
+  width:40px;height:0.5px;
+  background:rgba(26,42,94,0.25);
+  margin:20px auto;
+}
+.invite-body{
+  font-family:'EB Garamond',serif;
+  font-size:14px;letter-spacing:2px;
+  color:#1a2a5e;text-transform:uppercase;
+  line-height:2.2;margin-bottom:20px;text-align:center;
+}
+.invite-time{
+  font-family:'EB Garamond',serif;
+  font-size:14px;letter-spacing:3px;font-weight:500;
+  color:#1a2a5e;text-transform:uppercase;
+  margin-bottom:16px;text-align:center;
+}
+.invite-date-big{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(28px,7vw,42px);
+  color:#1a2a5e;letter-spacing:0px;font-weight:400;
+  margin-bottom:12px;text-align:center;
+}
+.invite-lunar{
+  font-family:'EB Garamond',serif;
+  font-size:12px;letter-spacing:2px;font-style:italic;
+  color:#4a5a7e;
+  margin-bottom:24px;text-align:center;
+}
+.invite-venue-label{
+  font-family:'EB Garamond',serif;
+  font-size:12px;letter-spacing:3px;font-weight:500;
+  color:#1a2a5e;text-transform:uppercase;
+  margin-bottom:6px;text-align:center;
+}
+.invite-venue-floor{
+  font-family:'EB Garamond',serif;
+  font-size:14px;letter-spacing:3px;font-weight:500;
+  color:#1a2a5e;text-transform:uppercase;
+  margin-bottom:10px;text-align:center;
+}
+.invite-venue-name{
+  font-family:'Pinyon Script',cursive;
+  font-size:clamp(44px,10vw,64px);
+  color:#1a2a5e;line-height:1;
+  margin-bottom:6px;text-align:center;
+}
+.invite-venue-sub{
+  font-family:'EB Garamond',serif;
+  font-size:13px;letter-spacing:3px;
+  color:#1a2a5e;text-transform:uppercase;
+  margin-bottom:16px;text-align:center;
+}
+.invite-address{
+  font-family:'EB Garamond',serif;
+  font-size:13px;letter-spacing:1px;
+  color:#4a5a7e;
+  line-height:1.9;margin-bottom:20px;text-align:center;
+}
+.invite-honor{
+  font-family:'EB Garamond',serif;
+  font-size:13px;letter-spacing:1px;
+  color:#1a2a5e;
+  line-height:2;font-style:italic;
+  margin-bottom:20px;text-align:center;
+}
+.invite-timeline-bar{
+  font-family:'EB Garamond',serif;
+  font-size:12px;letter-spacing:2px;
+  color:#4a5a7e;text-transform:uppercase;
+  border-top:1px solid rgba(26,42,94,0.2);
+  padding-top:14px;text-align:center;
+}
+
+/* ======= SECTION 3: SAVE THE DATE (navy) ======= */
+.s-savedate{
+  background:#1a2a5e;
+  padding:70px 32px;
+  text-align:center;
+}
+
+.save-script{
+  font-family:'Pinyon Script',cursive;
+  font-size:clamp(40px,9vw,64px);
+  color:#ffffff;line-height:1.2;
+  margin-bottom:4px;
+}
+.save-the{
+  font-family:'Pinyon Script',cursive;
+  font-size:clamp(32px,7vw,52px);
+  color:rgba(255,255,255,0.7);
+}
+.save-date-script{
+  font-family:'Pinyon Script',cursive;
+  font-size:clamp(48px,11vw,80px);
+  color:#ffffff;
+}
+
+.for-the-wedding{
+  font-family:'EB Garamond',serif;
+  font-size:12px;letter-spacing:4px;
+  color:rgba(255,255,255,0.5);
+  text-transform:uppercase;
+  margin:24px 0 10px;
+}
+.couple-big-name{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(16px,4vw,24px);
+  font-weight:500;letter-spacing:4px;
+  color:#ffffff;text-transform:uppercase;
+  margin-bottom:40px;
+}
+
+/* Family row */
+.family-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;max-width:480px;margin:0 auto 40px;
+  border-top:0.5px solid rgba(255,255,255,0.2);
+  border-bottom:0.5px solid rgba(255,255,255,0.2);
+  padding:24px 0;
+}
+.family-side{padding:0 20px;}
+.family-role{
+  font-family:'EB Garamond',serif;
+  font-size:12px;letter-spacing:3px;
+  color:rgba(255,255,255,0.5);
+  text-transform:uppercase;margin-bottom:8px;
+}
+.family-names{
+  font-family:'EB Garamond',serif;
+  font-size:14px;letter-spacing:1px;
+  color:#ffffff;font-weight:400;line-height:1.9;
+}
+.family-names strong{font-weight:500;}
+
+/* Timeline icons row */
+.timeline-icons{
+  display:flex;align-items:flex-start;justify-content:center;
+  gap:0;max-width:360px;margin:0 auto 32px;
+  position:relative;
+}
+.timeline-icons::before{
+  content:'';position:absolute;
+  top:28px;left:60px;right:60px;height:0.5px;
+  background:rgba(255,255,255,0.25);
+}
+.tl-item{flex:1;text-align:center;position:relative;z-index:1;}
+.tl-icon{
+  width:56px;height:56px;margin:0 auto 8px;
+  background:#1a2a5e;
+  display:flex;align-items:center;justify-content:center;
+}
+.tl-time{
+  font-family:'EB Garamond',serif;
+  font-size:14px;letter-spacing:1px;color:#ffffff;
+  margin-bottom:4px;
+}
+.tl-label{
+  font-family:'Pinyon Script',cursive;
+  font-size:22px;color:rgba(255,255,255,0.7);
+}
+
+.savedate-date{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(22px,5vw,32px);
+  letter-spacing:6px;color:#ffffff;font-weight:400;
+  margin-top:16px;
+}
+
+/* Thin separator */
+.sep{
+  display:flex;align-items:center;gap:16px;
+  max-width:300px;margin:32px auto;
+}
+.sep-line{flex:1;height:0.5px;}
+.sep-line.light{background:rgba(255,255,255,0.2);}
+.sep-line.dark{background:rgba(26,42,94,0.25);}
+.sep-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
+.sep-dot.light{background:rgba(255,255,255,0.4);}
+.sep-dot.dark{background:rgba(26,42,94,0.4);}
+
+/* ======= SECTION 4: RSVP (cream) ======= */
+.s-rsvp{
+  background:#f0ebe0;color:#1a2a5e;
+  padding:70px 32px;text-align:center;
+}
+.rsvp-title{
+  font-family:'EB Garamond',serif;
+  font-size:13px;letter-spacing:5px;
+  color:#1a2a5e;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.rsvp-sub{
+  font-family:'EB Garamond',serif;
+  font-size:15px;color:#4a5a7e;
+  font-weight:400;letter-spacing:1px;margin-bottom:40px;
+}
+.rsvp-form-wrap{max-width:380px;margin:0 auto;}
+.rsvp-input{
+  width:100%;background:transparent;
+  border:none;border-bottom:1px solid rgba(26,42,94,0.3);
+  padding:14px 0;
+  font-family:'EB Garamond',sans-serif;font-size:15px;
+  font-weight:400;color:#1a2a5e;letter-spacing:1px;
+  outline:none;transition:border-color 0.3s;
+  display:block;margin-bottom:24px;
+}
+.rsvp-input::placeholder{color:rgba(26,42,94,0.3);}
+.rsvp-input:focus{border-bottom-color:#1a2a5e;}
+.rsvp-radio-group{
+  display:flex;margin-bottom:32px;
+  border:1px solid rgba(26,42,94,0.3);
+}
+.rsvp-radio-btn{
+  flex:1;padding:13px 8px;text-align:center;
+  font-family:'EB Garamond',serif;
+  font-size:13px;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(26,42,94,0.4);cursor:pointer;
+  transition:all 0.3s;border-right:1px solid rgba(26,42,94,0.2);
+  user-select:none;
+}
+.rsvp-radio-btn:last-child{border-right:none;}
+.rsvp-radio-btn.active{color:#f0ebe0;background:#1a2a5e;}
+.rsvp-btn{
+  width:100%;padding:16px;background:transparent;
+  border:1px solid #1a2a5e;
+  color:#1a2a5e;font-family:'EB Garamond',serif;
+  font-size:13px;letter-spacing:4px;
+  text-transform:uppercase;cursor:pointer;transition:all 0.3s;
+}
+.rsvp-btn:hover{background:#1a2a5e;color:#f0ebe0;}
+.rsvp-success{
+  display:none;
+  font-family:'Pinyon Script',cursive;
+  font-size:44px;color:#1a2a5e;padding:40px 0;
+}
+.rsvp-success-sub{
+  font-family:'EB Garamond',serif;font-size:14px;
+  color:#4a5a7e;font-weight:400;letter-spacing:3px;
+  text-transform:uppercase;display:block;margin-top:12px;
+}
+
+/* FOOTER */
+footer{
+  background:#0f1a40;text-align:center;padding:48px 24px;
+}
+.ft-monogram{margin-bottom:16px;}
+.ft-names{
+  font-family:'Pinyon Script',cursive;font-size:32px;
+  color:rgba(255,255,255,0.7);margin-bottom:12px;
+}
+.ft-date{
+  font-family:'EB Garamond',serif;
+  font-size:10px;letter-spacing:4px;
+  color:rgba(255,255,255,0.3);text-transform:uppercase;
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="s-cover reveal">
+  <div class="monogram-wrap">
+    <svg viewBox="0 0 200 160" width="200" height="160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Left laurel branch -->
+      <g stroke="rgba(255,255,255,0.75)" stroke-width="0.9" fill="none">
+        <path d="M28 80 Q22 68 30 58"/>
+        <ellipse cx="24" cy="69" rx="5" ry="8" transform="rotate(-35 24 69)" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.6)" stroke-width="0.8"/>
+        <ellipse cx="27" cy="59" rx="4.5" ry="7" transform="rotate(-20 27 59)" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.55)" stroke-width="0.8"/>
+        <ellipse cx="33" cy="51" rx="4" ry="6.5" transform="rotate(-5 33 51)" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
+        <ellipse cx="41" cy="44" rx="4" ry="6" transform="rotate(12 41 44)" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="0.8"/>
+        <ellipse cx="51" cy="40" rx="3.5" ry="5.5" transform="rotate(28 51 40)" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+        <path d="M28 80 Q32 90 28 100"/>
+        <ellipse cx="24" cy="91" rx="5" ry="8" transform="rotate(35 24 91)" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.6)" stroke-width="0.8"/>
+        <ellipse cx="27" cy="101" rx="4.5" ry="7" transform="rotate(20 27 101)" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.55)" stroke-width="0.8"/>
+        <ellipse cx="33" cy="109" rx="4" ry="6.5" transform="rotate(5 33 109)" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
+        <ellipse cx="41" cy="116" rx="4" ry="6" transform="rotate(-12 41 116)" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="0.8"/>
+        <ellipse cx="51" cy="120" rx="3.5" ry="5.5" transform="rotate(-28 51 120)" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+      </g>
+      <!-- Right laurel branch (mirror) -->
+      <g stroke="rgba(255,255,255,0.75)" stroke-width="0.9" fill="none">
+        <path d="M172 80 Q178 68 170 58"/>
+        <ellipse cx="176" cy="69" rx="5" ry="8" transform="rotate(35 176 69)" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.6)" stroke-width="0.8"/>
+        <ellipse cx="173" cy="59" rx="4.5" ry="7" transform="rotate(20 173 59)" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.55)" stroke-width="0.8"/>
+        <ellipse cx="167" cy="51" rx="4" ry="6.5" transform="rotate(5 167 51)" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
+        <ellipse cx="159" cy="44" rx="4" ry="6" transform="rotate(-12 159 44)" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="0.8"/>
+        <ellipse cx="149" cy="40" rx="3.5" ry="5.5" transform="rotate(-28 149 40)" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+        <path d="M172 80 Q168 90 172 100"/>
+        <ellipse cx="176" cy="91" rx="5" ry="8" transform="rotate(-35 176 91)" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.6)" stroke-width="0.8"/>
+        <ellipse cx="173" cy="101" rx="4.5" ry="7" transform="rotate(-20 173 101)" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.55)" stroke-width="0.8"/>
+        <ellipse cx="167" cy="109" rx="4" ry="6.5" transform="rotate(-5 167 109)" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
+        <ellipse cx="159" cy="116" rx="4" ry="6" transform="rotate(12 159 116)" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="0.8"/>
+        <ellipse cx="149" cy="120" rx="3.5" ry="5.5" transform="rotate(28 149 120)" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+      </g>
+      <!-- Bottom tie -->
+      <path d="M80 138 Q100 145 120 138" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" fill="none"/>
+      <path d="M88 135 Q100 140 112 135" stroke="rgba(255,255,255,0.3)" stroke-width="0.7" fill="none"/>
+      <!-- LH italic serif text -->
+      <text x="100" y="98" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="54" font-style="italic" font-weight="400" fill="white" letter-spacing="4" opacity="0.95">LH</text>
+    </svg>
+  </div>
+
+  <div class="cover-names">Thùy Linh &amp; Đình Hiếu</div>
+  <div class="cover-with-love">With love,</div>
+  <div class="cover-welcome">Welcome to our wedding</div>
+  <div class="cover-date">18.04.2026</div>
+
+  <div class="cover-invite-line">
+    <div class="cover-invite-text">Trân trọng kính mời</div>
+  </div>
+</section>
+
+<!-- INVITE CARD -->
+<section class="s-invite">
+  <div class="invite-card reveal">
+    <div class="invite-label">Trân trọng kính mời</div>
+    <div class="invite-italic-sub">Quý khách</div>
+
+    <div class="invite-sep"></div>
+
+    <div class="invite-body">
+      Đến dự bữa tiệc chung vui<br>
+      cùng gia đình chúng tôi
+    </div>
+    <div class="invite-time">Vào lúc 11H00, Thứ Bảy</div>
+    <div class="invite-date-big">18.04.2026</div>
+    <div class="invite-lunar">( Tức ngày 2 tháng 3 năm Bính Ngọ )</div>
+
+    <div class="invite-sep"></div>
+
+    <div class="invite-venue-label">Hôn lễ được cử hành tại</div>
+    <div class="invite-venue-floor">Tầng 2</div>
+    <div class="invite-venue-name">Ngọc Hà</div>
+    <div class="invite-venue-sub">Palace</div>
+    <div class="invite-address">
+      439A Lý Thường Kiệt, Cửa Ông, Quảng Ninh
+    </div>
+
+    <div class="invite-sep"></div>
+
+    <div class="invite-honor">
+      Sự hiện diện của quý khách là niềm vinh hạnh<br>
+      cho gia đình chúng tôi
+    </div>
+  </div>
+</section>
+
+<!-- SAVE THE DATE -->
+<section class="s-savedate">
+  <div class="reveal">
+    <div class="save-script">Save</div>
+    <div class="save-the">the</div>
+    <div class="save-date-script">Date</div>
+
+    <div class="for-the-wedding">For the wedding of</div>
+    <div class="couple-big-name">Thùy Linh &amp; Đình Hiếu</div>
+
+    <div class="family-row reveal">
+      <div class="family-side">
+        <div class="family-role">Nhà gái:</div>
+        <div class="family-names">
+          Ông <strong>Trần Quang Thuấn</strong><br>
+          Bà <strong>Nguyễn Thị Hiên</strong>
+        </div>
+      </div>
+      <div class="family-side" style="border-left:0.5px solid rgba(255,255,255,0.15);">
+        <div class="family-role">Nhà trai:</div>
+        <div class="family-names">
+          Ông <strong>Nguyễn Đình Phượng</strong><br>
+          Bà <strong>Lâm Thị Định</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-icons reveal">
+      <div class="tl-item">
+        <div class="tl-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="8" width="24" height="20" rx="2" stroke="white" stroke-width="1"/>
+            <path d="M4 13h24" stroke="white" stroke-width="1"/>
+            <rect x="10" y="4" width="2" height="8" rx="1" fill="white"/>
+            <rect x="20" y="4" width="2" height="8" rx="1" fill="white"/>
+            <circle cx="10" cy="19" r="1.5" fill="white"/>
+            <circle cx="16" cy="19" r="1.5" fill="white"/>
+            <circle cx="22" cy="19" r="1.5" fill="white"/>
+          </svg>
+        </div>
+        <div class="tl-time">10:30</div>
+        <div class="tl-label">Đón khách</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="11" cy="16" r="6" stroke="white" stroke-width="1"/>
+            <circle cx="21" cy="16" r="6" stroke="white" stroke-width="1"/>
+            <path d="M16 11 L16 21" stroke="white" stroke-width="0.8"/>
+          </svg>
+        </div>
+        <div class="tl-time">11:00</div>
+        <div class="tl-label">Lễ cưới</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M10 22 L10 12 Q10 8 16 8 Q22 8 22 12 L22 22" stroke="white" stroke-width="1" fill="none"/>
+            <path d="M8 22 L24 22" stroke="white" stroke-width="1"/>
+            <path d="M13 8 Q16 4 19 8" stroke="white" stroke-width="0.8" fill="none"/>
+            <circle cx="10" cy="11" r="1" fill="white"/>
+            <circle cx="22" cy="11" r="1" fill="white"/>
+          </svg>
+        </div>
+        <div class="tl-time">11:15</div>
+        <div class="tl-label">Khai tiệc</div>
+      </div>
+    </div>
+
+    <div class="savedate-date">18 . 04 . 2026</div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="s-rsvp reveal">
+  <div class="rsvp-title">Xác nhận tham dự</div>
+  <div class="sep"><div class="sep-line dark"></div><div class="sep-dot dark"></div><div class="sep-line dark"></div></div>
+  <div class="rsvp-sub">Vui lòng xác nhận trước ngày 10.04.2026</div>
+  <div class="rsvp-form-wrap" id="rsvp-form">
+    <p style="font-family:'EB Garamond',serif;font-size:15px;color:#4a5a7e;letter-spacing:1px;margin-bottom:32px;line-height:2;">
+      Nhấn nút bên dưới để xác nhận tham dự.<br>Chỉ mất 30 giây thôi!
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScIniIF6kQD7gNZc6NhG_r9tNAptVBwZZgd2NyfcMlG6XbixQ/viewform?usp=publish-editor" target="_blank" class="rsvp-btn" style="display:inline-block;text-decoration:none;padding:18px 48px;">
+      Xác nhận tham dự
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-monogram">
+    <svg viewBox="0 0 120 90" width="120" height="90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="rgba(255,255,255,0.35)" stroke-width="0.8" fill="none">
+        <path d="M16 45 Q12 38 17 31"/>
+        <ellipse cx="13" cy="39" rx="3" ry="5" transform="rotate(-35 13 39)" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="0.7"/>
+        <ellipse cx="16" cy="32" rx="2.5" ry="4" transform="rotate(-15 16 32)" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.25)" stroke-width="0.7"/>
+        <ellipse cx="22" cy="26" rx="2.5" ry="4" transform="rotate(10 22 26)" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.22)" stroke-width="0.7"/>
+        <ellipse cx="29" cy="22" rx="2" ry="3.5" transform="rotate(28 29 22)" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+        <path d="M16 45 Q19 52 16 59"/>
+        <ellipse cx="13" cy="51" rx="3" ry="5" transform="rotate(35 13 51)" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="0.7"/>
+        <ellipse cx="16" cy="58" rx="2.5" ry="4" transform="rotate(15 16 58)" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.25)" stroke-width="0.7"/>
+        <ellipse cx="22" cy="64" rx="2.5" ry="4" transform="rotate(-10 22 64)" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.22)" stroke-width="0.7"/>
+        <ellipse cx="29" cy="68" rx="2" ry="3.5" transform="rotate(-28 29 68)" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+      </g>
+      <g stroke="rgba(255,255,255,0.35)" stroke-width="0.8" fill="none">
+        <path d="M104 45 Q108 38 103 31"/>
+        <ellipse cx="107" cy="39" rx="3" ry="5" transform="rotate(35 107 39)" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="0.7"/>
+        <ellipse cx="104" cy="32" rx="2.5" ry="4" transform="rotate(15 104 32)" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.25)" stroke-width="0.7"/>
+        <ellipse cx="98" cy="26" rx="2.5" ry="4" transform="rotate(-10 98 26)" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.22)" stroke-width="0.7"/>
+        <ellipse cx="91" cy="22" rx="2" ry="3.5" transform="rotate(-28 91 22)" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+        <path d="M104 45 Q101 52 104 59"/>
+        <ellipse cx="107" cy="51" rx="3" ry="5" transform="rotate(-35 107 51)" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="0.7"/>
+        <ellipse cx="104" cy="58" rx="2.5" ry="4" transform="rotate(-15 104 58)" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.25)" stroke-width="0.7"/>
+        <ellipse cx="98" cy="64" rx="2.5" ry="4" transform="rotate(10 98 64)" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.22)" stroke-width="0.7"/>
+        <ellipse cx="91" cy="68" rx="2" ry="3.5" transform="rotate(28 91 68)" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+      </g>
+      <path d="M46 78 Q60 83 74 78" stroke="rgba(255,255,255,0.2)" stroke-width="0.7" fill="none"/>
+      <text x="60" y="56" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="32" font-style="italic" font-weight="400" fill="rgba(255,255,255,0.55)" letter-spacing="3">LH</text>
+    </svg>
+  </div>
+  <div class="ft-names">Thùy Linh &amp; Đình Hiếu</div>
+  <div class="ft-date">18 · 04 · 2026 &nbsp;·&nbsp; Quảng Ninh</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('visible');});
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
